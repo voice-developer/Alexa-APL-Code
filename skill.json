@@ -1,0 +1,41 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Find out if you are on Santa's naughty or nice list",
+          "examplePhrases": [
+            "Alexa open Santas little helper",
+            "Alexa start Santas little helper",
+            "Alexa launch Santas little helper"
+          ],
+          "name": "santa's little helper",
+          "description": "Every Christmas Santa makes his naughty and nice list. Use this skill to find out which list you are on!"
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Launch the skill and when prompted tell the skill your first name, and then ask if you are naughty or nice.",
+      "category": "CHILDRENS_NOVELTY_AND_HUMOR",
+      "distributionCountries": [
+        "US",
+        "GB",
+        "CA",
+        "AU",
+        "IN"
+      ]
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda/custom"
+        },
+        "interfaces": [
+          {
+            "type":"ALEXA_PRESENTATION_APL"
+          }
+        ]
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}

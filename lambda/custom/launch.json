@@ -1,0 +1,90 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Frame",
+                "height": "100vh",
+                "width": "100vw",
+                "backgroundColor": "#81c784",
+                "items": [
+                    {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/lwg6zry89n41q9t/elf.png?dl=0",
+                                "height": "70vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "5vw",
+                                "right": "10vw",
+                                "top": "30vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "12vw",
+                                "right": "12vw",
+                                "top": "7vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "8vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "top": "2vh",
+                                "fontWeight": "900",
+                                "fontSize": "6vw"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/lwg6zry89n41q9t/elf.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "40vh",
+                                "top": "5vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Let's find out if you are on the naughty or nice list. To get started, tell me your name",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "55vw",
+                                "top": "15vh",
+                                "fontSize": "5vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

@@ -1,0 +1,80 @@
+{
+  "interactionModel": {
+      "languageModel": {
+          "invocationName": "santa's little helper",
+          "intents": [
+              {
+                  "name": "AMAZON.CancelIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.HelpIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.StopIntent",
+                  "samples": []
+              },
+              {
+                  "name": "AMAZON.FallbackIntent",
+                  "samples": []
+              },
+              {
+                  "name": "getFirstNameIntent",
+                  "slots": [
+                      {
+                          "name": "firstName",
+                          "type": "AMAZON.US_FIRST_NAME"
+                      }
+                  ],
+                  "samples": [
+                      "it's {firstName}",
+                      "my name is {firstName}",
+                      "{firstName}",
+                      "my first name is {firstName}",
+                      "my first name is stuart"
+                  ]
+              },
+              {
+                "name": "blahBlahIntent",
+                "slots": [
+                    
+                ],
+                "samples": [
+                    "blah",
+                    "blah blah blah",
+                    "bla",
+                    "bla bla",
+                    "bar humbug",
+                    "humbug"
+                ]
+            },
+              {
+                "name": "merryChristmasIntent",
+                "slots": [
+                    
+                ],
+                "samples": [
+                    "merry christmas",
+                    "merry xmas",
+                    "merry x mas",
+                    "happy holidays",
+                    "happy holiday"
+                ]
+            },
+              {
+                  "name": "AMAZON.YesIntent",
+                  "samples": [
+                      "im ready",
+                      "I am ready"
+                  ]
+              },
+              {
+                "name": "AMAZON.NoIntent",
+                "samples": []
+            }
+          ],
+          "types": []
+      }
+  }
+}

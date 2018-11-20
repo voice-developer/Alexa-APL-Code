@@ -1,0 +1,90 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Frame",
+                "height": "100vh",
+                "width": "100vw",
+                "backgroundColor": "#1a237e",
+                "items": [
+                    {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/86vawwjdm2xf6q7/kisspng-santa-claus-reindeer-sled-clip-art-santa-claus-png-transparent-images-5aaef17a8aa1c6.8689408715214145225679%20%281%29.png?dl=0",
+                                "height": "70vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "1vw",
+                                "right": "10vw",
+                                "top": "25vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "12vw",
+                                "right": "12vw",
+                                "top": "7vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "8vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "top": "2vh",
+                                "fontWeight": "900",
+                                "fontSize": "6vw"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/86vawwjdm2xf6q7/kisspng-santa-claus-reindeer-sled-clip-art-santa-claus-png-transparent-images-5aaef17a8aa1c6.8689408715214145225679%20%281%29.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "10vh",
+                                "top": "-1vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Awesome! You are on the Nice list. Santa will be seeing you soon. Remember to stay good and come back again to see if you're still on the nice list. Merry Christmas",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "5vw",
+                                "top": "65vh",
+                                "fontSize": "4vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

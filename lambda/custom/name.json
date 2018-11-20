@@ -1,0 +1,100 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Frame",
+                "height": "100vh",
+                "width": "100vw",
+                "backgroundColor": "#e53935",
+                "items": [
+                    {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/alwxpydwaitsdm5/Christmas_Tree_with_Gifts_PNG_Clipart-16.png?dl=0",
+                                "height": "70vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "1vw",
+                                "right": "10vw",
+                                "top": "30vh"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/kp2i5ngsyiw4glv/baubles.png?dl=0",
+                                "height": "70vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "1vw",
+                                "right": "10vw",
+                                "top": "-15vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "12vw",
+                                "right": "12vw",
+                                "top": "8vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "8vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/kp2i5ngsyiw4glv/baubles.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "0vh",
+                                "top": "-15vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "top": "2vh",
+                                "fontWeight": "900",
+                                "fontSize": "8vw"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "I love that name! Now let me see if you are on the naughty or nice list. Are you ready to find out? Say 'Yes' when you are ready.",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "5vw",
+                                "top": "65vh",
+                                "fontSize": "4vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

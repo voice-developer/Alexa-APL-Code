@@ -1,0 +1,94 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Frame",
+                "height": "100vh",
+                "width": "100vw",
+                "backgroundColor": "#212121",
+                "items": [
+                    {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/vv1nakdftoh24a8/north-pole.png?dl=0",
+                                "height": "60vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "0vw",
+                                "right": "0vw",
+                                "top": "20vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "12vw",
+                                "right": "12vw",
+                                "top": "7vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "8vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "5vh",
+                                "top": "2vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "7vw"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/vv1nakdftoh24a8/north-pole.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "0vh",
+                                "top": "4vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "keep coming back to check what list you are on. Just say 'Alexa, open Santa's little helper'",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "5vh",
+                                "top": "82vh",
+                                "fontWeight": "600",
+                                "textAlign": "center",
+                                "fontSize": "4vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

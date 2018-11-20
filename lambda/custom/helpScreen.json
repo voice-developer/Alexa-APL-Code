@@ -1,0 +1,90 @@
+{
+    "type": "APL",
+    "version": "1.0",
+    "theme": "dark",
+    "import": [
+        {
+            "name": "alexa-viewport-profiles",
+            "version": "1.0.0"
+        }
+    ],
+    "resources": [],
+    "styles": {},
+    "layouts": {},
+    "mainTemplate": {
+        "items": [
+            {
+                "type": "Frame",
+                "height": "100vh",
+                "width": "100vw",
+                "backgroundColor": "#795548",
+                "items": [
+                    {
+                        "when": "${@viewportProfile == @hubRoundSmall}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/m0qren3umsbwud0/christmas-lights-png-14347%20%281%29.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "10vw",
+                                "right": "10vw",
+                                "top": "15vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "12vw",
+                                "right": "12vw",
+                                "top": "7vh",
+                                "fontWeight": "900",
+                                "textAlign": "center",
+                                "fontSize": "8vw"
+                            }
+                        ]
+                    },
+                    {
+                        "when": "${@viewportProfile == @hubLandscapeMedium || @viewportProfile == @hubLandscapeLarge || @viewportProfile == @tvLandscapeXLarge}",
+                        "type": "Container",
+                        "height": "100vh",
+                        "width": "100vw",
+                        "items": [
+                            {
+                                "type": "Text",
+                                "text": "Santa's Little Helper",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "top": "2vh",
+                                "fontWeight": "900",
+                                "fontSize": "6vw"
+                            },
+                            {
+                                "type": "Image",
+                                "source": "https://dl.dropbox.com/s/m0qren3umsbwud0/christmas-lights-png-14347%20%281%29.png?dl=0",
+                                "height": "90vh",
+                                "width": "100vw",
+                                "position": "absolute",
+                                "left": "35vh",
+                                "top": "12vh"
+                            },
+                            {
+                                "type": "Text",
+                                "text": "Just follow the prompts and I will help you to find out if you are on Santa's naughty or nice list. Tell me your name to get started!",
+                                "position": "absolute",
+                                "left": "5vh",
+                                "right": "55vw",
+                                "top": "15vh",
+                                "fontSize": "4vw"
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
