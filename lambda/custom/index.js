@@ -57,7 +57,7 @@ const LaunchRequestHandler = {
     //type name of array into the brackets
     let speechOutput = getRandomPhrase(welcomeMsg);
     const speechText = sleighBells + speechOutput;
-if(handlerInput.supportsDisplay){
+    if (deviceHasDisplay(handlerInput)) {
   return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -129,7 +129,7 @@ const getFirstNameIntentHandler = {
     
     
   
-    if(handlerInput.supportsDisplay){
+      if (deviceHasDisplay(handlerInput)) {
       return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -165,7 +165,7 @@ const merryChristmasIntentHandler = {
       const speechText = voiceNameOpenTag + merryMsg + voiceNameCloseTag;
       const cardText = merryMsg;
       
-      if(handlerInput.supportsDisplay){
+      if (deviceHasDisplay(handlerInput)) {
         return handlerInput.responseBuilder
         .speak(speechText)
         .reprompt(speechText)
@@ -206,7 +206,7 @@ const yesIntentHandler = {
     const speechText = sleighBells + speechOutput + endMsg;
     const cardText = 'If you want to double check say yes, or say you can stop to close this skill!';
     
-    if(handlerInput.supportsDisplay){
+    if (deviceHasDisplay(handlerInput)) {
       return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -242,7 +242,7 @@ const blahBlahIntentHandler = {
       const speechText = voiceNameOpenTag + ' Bar humbug! Blah Blah Blah. I think someone needs to find some christmas cheer. Say yes if you want to see if you are on the naughty or nice list' + voiceNameCloseTag;
       const cardText = 'Bar humbug! Blah Blah Blah. I think someone needs to find some christmas cheer';
       
-      if(handlerInput.supportsDisplay){
+      if (deviceHasDisplay(handlerInput)) {
         return handlerInput.responseBuilder
         .speak(speechText)
         .reprompt(speechText)
@@ -277,7 +277,7 @@ const noIntentHandler = {
     const speechText = speechOutput;
     const cardText = 'Don\'t be shy, say yes to find out if you are on the naughty or nice list';
     
-    if(handlerInput.supportsDisplay){
+    if (deviceHasDisplay(handlerInput)) {
       return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -311,7 +311,7 @@ const HelpIntentHandler = {
     const speechText = voiceNameOpenTag + 'Just follow the prompts and I will help you to find out if you are on Santa\'s naughty or nice list. Tell me your name to get started!' + voiceNameCloseTag;
     const cardText = 'Just follow the prompts and I will help you to find out if you are on Santa\'s naughty or nice list. Tell me your name to get started!';
     
-    if(handlerInput.supportsDisplay){
+    if (deviceHasDisplay(handlerInput)) {
       return handlerInput.responseBuilder
       .speak(speechText)
       .reprompt(speechText)
@@ -345,7 +345,7 @@ const CancelAndStopIntentHandler = {
     let speechOutput = getRandomPhrase(stopMsg);
     const speechText = speechOutput;
     const cardText = 'Come back soon to see what list you are on. Just say Alexa, open santa\'s little helper';
-    if(handlerInput.supportsDisplay){
+    if (deviceHasDisplay(handlerInput)) {
       return handlerInput.responseBuilder
       .speak(speechText)
       .withSimpleCard(skillName, cardText)
@@ -397,7 +397,21 @@ function getRandomPhrase(array) {
   return (array[i]);
 };
 
+/* Check for a device with a display
+ */
+function deviceHasDisplay(handlerInput) {
+  
+  var result = 
+    handlerInput &&
+    handlerInput.requestEnvelope &&
+    handlerInput.requestEnvelope.context &&
+    handlerInput.requestEnvelope.context.System &&
+    handlerInput.requestEnvelope.context.System.device &&
+    handlerInput.requestEnvelope.context.System.device.supportedInterfaces &&
+    handlerInput.requestEnvelope.context.System.device.supportedInterfaces.hasOwnProperty('Alexa.Presentation.APL');
 
+  return result;
+}
 
 const skillBuilder = Alexa.SkillBuilders.custom();
 
